@@ -63,9 +63,8 @@ class BaseTable:
             log.error(err)
             raise
 
-    def load_batch(self, batch_json):
+    def load_batch(self, batch):
         try:
-            batch = json.loads(batch_json)["songs"]
             with self._table.batch_writer() as write:
                 for item in batch:
                     write.put_item(Item=item)
@@ -90,6 +89,10 @@ class Music(BaseTable):
             ProvisionedThroughput={"ReadCapacityUnits": 10, "WriteCapacityUnits": 10},
         )
 
+    def load_batch(self, batch_json):
+        batch = json.loads(batch_json)["songs"]
+        super().load_batch(batch)
+
 
 class Login(BaseTable):
     def __init__(self, db):
@@ -100,3 +103,7 @@ class Login(BaseTable):
             AttributeDefinitions=[{"AttributeName": "email", "AttributeType": "S"}],
             ProvisionedThroughput={"ReadCapacityUnits": 10, "WriteCapacityUnits": 10},
         )
+
+    def load_batch(self, batch_json):
+        batch = json.loads(batch_json)["songs"]
+        super().load_batch(batch)
