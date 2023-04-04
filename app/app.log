@@ -1,0 +1,1811 @@
+2023-03-29 21:03:46 — DEBUG flask_simplelogin — logout:352 — /
+2023-03-29 21:03:46 — DEBUG flask_simplelogin — logout:353 — http://localhost/assignment_1/
+2023-04-03 16:24:15 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): 169.254.169.254:80
+2023-04-03 16:24:16 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (2): 169.254.169.254:80
+2023-04-03 16:29:19 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (3): 169.254.169.254:80
+2023-04-03 16:29:20 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (4): 169.254.169.254:80
+2023-04-03 16:29:41 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): 169.254.169.254:80
+2023-04-03 16:29:42 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (2): 169.254.169.254:80
+2023-04-03 16:36:25 \u2014 DEBUG app \u2014 init_app:18 \u2014 /srv/http
+2023-04-03 16:36:52 \u2014 DEBUG app \u2014 init_app:18 \u2014 /srv/http
+2023-04-03 16:40:49 \u2014 DEBUG app \u2014 init_app:18 \u2014 /srv/http
+2023-04-03 16:40:49 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): 169.254.169.254:80
+2023-04-03 16:40:50 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (2): 169.254.169.254:80
+2023-04-03 16:41:36 \u2014 DEBUG app \u2014 init_app:18 \u2014 /srv/http
+2023-04-03 16:41:36 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): 169.254.169.254:80
+2023-04-03 16:41:37 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (2): 169.254.169.254:80
+2023-04-03 16:42:14 \u2014 DEBUG app \u2014 init_app:18 \u2014 /srv/http
+2023-04-03 16:42:16 \u2014 DEBUG app \u2014 init_app:18 \u2014 /srv/http
+2023-04-03 16:43:16 \u2014 ERROR app \u2014 log_exception:1744 \u2014 Exception on /debug [GET]
+Traceback (most recent call last):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/srv/http/assignment_1/app/routes.py", line 22, in debug
+    return g.db
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/ctx.py", line 52, in __getattr__
+    raise AttributeError(name) from None
+AttributeError: db
+2023-04-03 16:45:15 \u2014 ERROR app \u2014 log_exception:1744 \u2014 Exception on /debug [GET]
+Traceback (most recent call last):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1845, in finalize_request
+    response = self.make_response(rv)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2137, in make_response
+    raise TypeError(
+TypeError: The view function for 'debug' did not return a valid response. The function either returned None or ended without a return statement.
+2023-04-03 16:47:39 \u2014 ERROR app \u2014 log_exception:1744 \u2014 Exception on /debug [GET]
+Traceback (most recent call last):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/srv/http/assignment_1/app/routes.py", line 22, in debug
+    return f'Database found af {g.db.__str__()}'
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/ctx.py", line 52, in __getattr__
+    raise AttributeError(name) from None
+AttributeError: db
+2023-04-03 16:55:12 \u2014 ERROR app \u2014 log_exception:1744 \u2014 Exception on /debug [GET]
+Traceback (most recent call last):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/srv/http/assignment_1/app/routes.py", line 22, in debug
+    return f'Database found af {g.db.__str__()}'
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/ctx.py", line 52, in __getattr__
+    raise AttributeError(name) from None
+AttributeError: db
+2023-04-03 17:04:14 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-03 17:04:14 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 17:04:14 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-03 17:04:14 \u2014 DEBUG cloud.tables \u2014 __get_table:28 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-03 17:04:14 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 145
+2023-04-03 17:04:14 \u2014 ERROR app \u2014 log_exception:1744 \u2014 Exception on /login/ [POST]
+Traceback (most recent call last):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask_simplelogin/__init__.py", line 337, in login
+    if self._login_checker(form.data):
+  File "/srv/http/assignment_1/app/auth.py", line 11, in login_checker
+    return res['Items'][0].get('password') == user.password
+AttributeError: 'dict' object has no attribute 'password'
+2023-04-03 17:05:16 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-03 17:05:16 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 17:05:16 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-03 17:05:16 \u2014 DEBUG cloud.tables \u2014 __get_table:28 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-03 17:05:16 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 145
+2023-04-03 17:05:16 \u2014 DEBUG auth \u2014 login_checker:11 \u2014 {'Items': [{'email': 's37851112@student.rmit.edu.au', 'password': Decimal('234567'), 'username': 'MatthewRicci2'}], 'Count': 1, 'ScannedCount': 1, 'ResponseMetadata': {'RequestId': 'becb5ea8-e8d9-447c-a4dd-b4036e619ff8', 'HTTPStatusCode': 200, 'HTTPHeaders': {'date': 'Mon, 03 Apr 2023 07:05:16 GMT', 'x-amzn-requestid': 'becb5ea8-e8d9-447c-a4dd-b4036e619ff8', 'content-type': 'application/x-amz-json-1.0', 'x-amz-crc32': '3280392141', 'content-length': '145', 'server': 'Jetty(9.4.48.v20220622)'}, 'RetryAttempts': 0}}
+2023-04-03 17:05:16 \u2014 ERROR app \u2014 log_exception:1744 \u2014 Exception on /login/ [POST]
+Traceback (most recent call last):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask_simplelogin/__init__.py", line 337, in login
+    if self._login_checker(form.data):
+  File "/srv/http/assignment_1/app/auth.py", line 12, in login_checker
+    return res['Items'][0].get('password') == user.password
+AttributeError: 'dict' object has no attribute 'password'
+2023-04-03 17:06:00 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-03 17:06:00 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 17:06:00 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-03 17:06:00 \u2014 DEBUG cloud.tables \u2014 __get_table:28 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-03 17:06:00 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 145
+2023-04-03 17:06:00 \u2014 DEBUG auth \u2014 login_checker:11 \u2014 {'email': 's37851112@student.rmit.edu.au', 'password': Decimal('234567'), 'username': 'MatthewRicci2'}
+2023-04-03 17:06:00 \u2014 ERROR app \u2014 log_exception:1744 \u2014 Exception on /login/ [POST]
+Traceback (most recent call last):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask_simplelogin/__init__.py", line 337, in login
+    if self._login_checker(form.data):
+  File "/srv/http/assignment_1/app/auth.py", line 12, in login_checker
+    return res['Items'][0].get('password') == user.password
+AttributeError: 'dict' object has no attribute 'password'
+2023-04-03 17:07:47 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-03 17:07:47 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 17:07:47 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-03 17:07:47 \u2014 DEBUG cloud.tables \u2014 __get_table:28 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-03 17:07:47 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 145
+2023-04-03 17:07:47 \u2014 DEBUG auth \u2014 login_checker:11 \u2014 {'email': 's37851112@student.rmit.edu.au', 'password': Decimal('234567'), 'username': 'MatthewRicci2'}
+2023-04-03 17:08:05 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 17:08:06 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-03 17:08:06 \u2014 DEBUG cloud.tables \u2014 __get_table:28 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-03 17:08:06 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 145
+2023-04-03 17:08:06 \u2014 DEBUG auth \u2014 login_checker:11 \u2014 {'email': 's37851112@student.rmit.edu.au', 'password': Decimal('234567'), 'username': 'MatthewRicci2'}
+2023-04-03 17:10:18 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-03 17:10:18 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 17:10:18 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-03 17:10:18 \u2014 DEBUG cloud.tables \u2014 __get_table:28 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-03 17:10:18 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 145
+2023-04-03 17:10:18 \u2014 DEBUG auth \u2014 login_checker:12 \u2014 {'email': 's37851112@student.rmit.edu.au', 'password': Decimal('234567'), 'username': 'MatthewRicci2'}
+2023-04-03 17:10:18 \u2014 DEBUG auth \u2014 login_checker:13 \u2014 {'username': 's37851112@student.rmit.edu.au', 'password': '234567', 'csrf_token': 'IjcxMWQ0OTllZjRlYjc5ZjkwYzEyMTAyYzU4MzNhZGI2Yjg3NDdlNzgi.ZCp7VQ.ZINgVwKF091Oe4mi_Mz7xabgINE'}
+2023-04-03 17:11:02 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-03 17:11:02 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 17:11:02 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-03 17:11:02 \u2014 DEBUG cloud.tables \u2014 __get_table:28 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-03 17:11:02 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 145
+2023-04-03 17:11:02 \u2014 DEBUG auth \u2014 login_checker:12 \u2014 {'email': 's37851112@student.rmit.edu.au', 'password': Decimal('234567'), 'username': 'MatthewRicci2'}
+2023-04-03 17:11:02 \u2014 DEBUG auth \u2014 login_checker:13 \u2014 {'username': 's37851112@student.rmit.edu.au', 'password': '234567', 'csrf_token': 'IjcxMWQ0OTllZjRlYjc5ZjkwYzEyMTAyYzU4MzNhZGI2Yjg3NDdlNzgi.ZCp72g.SGUE_1Lgvji81z7ubW3I2xBHc9c'}
+2023-04-03 17:27:09 \u2014 ERROR app \u2014 log_exception:1744 \u2014 Exception on /database/Login [GET]
+Traceback (most recent call last):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/srv/http/assignment_1/app/routes.py", line 24, in database
+    return render_template('database.html', table_name=table, database_items=table_.query_all())
+TypeError: BaseTable.query_all() missing 1 required positional argument: 'self'
+2023-04-03 17:28:03 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-03 17:28:03 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 17:28:03 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-03 17:28:03 \u2014 DEBUG cloud.tables \u2014 __get_table:28 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-03 17:28:03 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 1109
+2023-04-03 17:28:18 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-03 17:28:18 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 17:28:18 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-03 17:28:18 \u2014 DEBUG cloud.tables \u2014 __get_table:28 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-03 17:28:18 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 1109
+2023-04-03 17:29:31 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-03 17:29:31 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 17:29:31 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-03 17:29:31 \u2014 DEBUG cloud.tables \u2014 __get_table:28 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-03 17:29:31 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 1109
+2023-04-03 17:29:31 \u2014 ERROR app \u2014 log_exception:1744 \u2014 Exception on /database/Login [GET]
+Traceback (most recent call last):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/srv/http/assignment_1/app/routes.py", line 26, in database
+    return render_template('database.html', table_name=table, database_items=json.dumps(items))
+  File "/usr/lib/python3.10/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "/usr/lib/python3.10/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.10/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python3.10/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Decimal is not JSON serializable
+2023-04-03 17:30:50 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-03 17:30:50 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 17:30:50 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-03 17:30:50 \u2014 DEBUG cloud.tables \u2014 __get_table:28 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-03 17:30:50 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 1109
+2023-04-03 17:36:10 \u2014 DEBUG urllib3.connectionpool \u2014 _get_conn:273 \u2014 Resetting dropped connection: localhost
+2023-04-03 17:36:10 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 17:36:10 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-03 17:36:10 \u2014 DEBUG cloud.tables \u2014 __get_table:28 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-03 17:36:10 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 1109
+2023-04-03 17:37:37 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-03 17:37:37 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 17:37:37 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-03 17:37:37 \u2014 DEBUG cloud.tables \u2014 __get_table:28 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-03 17:37:37 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 1109
+2023-04-03 17:40:31 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-03 17:40:31 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 17:40:31 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-03 17:40:31 \u2014 DEBUG cloud.tables \u2014 __get_table:28 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-03 17:40:31 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 1109
+2023-04-03 17:41:15 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-03 17:41:15 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 17:41:15 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-03 17:41:15 \u2014 DEBUG cloud.tables \u2014 __get_table:28 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-03 17:41:15 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 1109
+2023-04-03 17:42:00 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-03 17:42:00 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 17:42:00 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-03 17:42:00 \u2014 DEBUG cloud.tables \u2014 __get_table:28 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-03 17:42:00 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 1109
+2023-04-03 17:42:08 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 17:42:08 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 569
+2023-04-03 17:42:08 \u2014 DEBUG cloud.tables \u2014 __get_table:28 \u2014 Loaded table at dynamodb.Table(name='music')
+2023-04-03 17:42:08 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 None
+2023-04-03 17:43:49 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-03 17:43:49 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 17:43:49 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 569
+2023-04-03 17:43:49 \u2014 DEBUG cloud.tables \u2014 __get_table:28 \u2014 Loaded table at dynamodb.Table(name='music')
+2023-04-03 17:43:49 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 None
+2023-04-03 17:44:22 \u2014 ERROR app \u2014 log_exception:1744 \u2014 Exception on /music [GET]
+Traceback (most recent call last):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/srv/http/assignment_1/app/routes.py", line 24, in database
+    table_ = getattr(import_module('cloud.tables'), table)(current_app.extensions['db'])
+AttributeError: module 'cloud.tables' has no attribute 'music'
+2023-04-03 17:44:26 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-03 17:44:26 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 17:44:26 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 569
+2023-04-03 17:44:26 \u2014 DEBUG cloud.tables \u2014 __get_table:28 \u2014 Loaded table at dynamodb.Table(name='music')
+2023-04-03 17:44:26 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 None
+2023-04-03 17:46:07 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-03 17:46:07 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 17:46:07 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 569
+2023-04-03 17:46:07 \u2014 DEBUG cloud.tables \u2014 __get_table:28 \u2014 Loaded table at dynamodb.Table(name='music')
+2023-04-03 17:46:07 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 None
+2023-04-03 17:46:09 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 17:46:09 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 569
+2023-04-03 17:46:09 \u2014 DEBUG cloud.tables \u2014 __get_table:28 \u2014 Loaded table at dynamodb.Table(name='music')
+2023-04-03 17:46:09 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 None
+2023-04-03 17:50:21 \u2014 ERROR app \u2014 log_exception:1744 \u2014 Exception on /register [GET]
+Traceback (most recent call last):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/srv/http/assignment_1/app/routes.py", line 15, in register
+    return render_template('regiser.html')
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/templating.py", line 146, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/templating.py", line 62, in get_source
+    return self._get_source_fast(environment, template)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: regiser.html
+2023-04-03 17:50:47 \u2014 ERROR app \u2014 log_exception:1744 \u2014 Exception on /register [GET]
+Traceback (most recent call last):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/srv/http/assignment_1/app/routes.py", line 15, in register
+    return render_template('register.html')
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/templating.py", line 146, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/srv/http/assignment_1/app/templates/register.html", line 22, in template
+    {% endwith %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'endwith'.
+2023-04-03 17:51:38 \u2014 ERROR app \u2014 log_exception:1744 \u2014 Exception on /register [GET]
+Traceback (most recent call last):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/srv/http/assignment_1/app/routes.py", line 15, in register
+    return render_template('register.html')
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/srv/http/assignment_1/app/templates/register.html", line 23, in top-level template code
+    {%if form.errors %}
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/jinja2/environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form' is undefined
+2023-04-03 18:19:35 \u2014 INFO flask_wtf.csrf \u2014 validate_csrf_token:158 \u2014 The CSRF token is missing.
+2023-04-03 18:20:20 \u2014 ERROR app \u2014 log_exception:1744 \u2014 Exception on /register [POST]
+Traceback (most recent call last):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/srv/http/assignment_1/app/routes.py", line 20, in register
+    return redirect(url_for("login"))
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/helpers.py", line 256, in url_for
+    return current_app.url_for(
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'login'. Did you mean 'simplelogin.login' instead?
+2023-04-03 18:22:46 \u2014 ERROR app \u2014 log_exception:1744 \u2014 Exception on /registre [GET]
+Traceback (most recent call last):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/srv/http/assignment_1/app/routes.py", line 31, in database
+    table_ = getattr(import_module("cloud.tables"), table.capitalize())(
+AttributeError: module 'cloud.tables' has no attribute 'Registre'
+2023-04-03 19:46:29 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-03 19:46:29 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 19:46:29 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-03 19:46:29 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-03 19:46:29 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 400 165
+2023-04-03 19:46:29 \u2014 ERROR app \u2014 log_exception:1744 \u2014 Exception on /login [GET]
+Traceback (most recent call last):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/srv/http/assignment_1/app/routes.py", line 23, in login
+    res = login_table.query_key("email", email)
+  File "/srv/http/assignment_1/app/cloud/tables.py", line 56, in query_key
+    return self._table.query(KeyConditionExpression=Key(key_name).eq(query_value))
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/boto3/resources/factory.py", line 580, in do_action
+    response = action(self, *args, **kwargs)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/boto3/resources/action.py", line 88, in __call__
+    response = getattr(parent.meta.client, operation_name)(*args, **params)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/client.py", line 530, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/client.py", line 960, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ValidationException) when calling the Query operation: One or more parameter values were invalid: Condition parameter type does not match schema type
+2023-04-03 19:56:52 \u2014 ERROR app \u2014 log_exception:1744 \u2014 Exception on /_registre [GET]
+Traceback (most recent call last):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/srv/http/assignment_1/app/routes.py", line 56, in database
+    table_ = getattr(import_module("cloud.tables"), table.capitalize())(
+AttributeError: module 'cloud.tables' has no attribute 'Registre'
+2023-04-03 19:56:55 \u2014 ERROR app \u2014 log_exception:1744 \u2014 Exception on /_register [GET]
+Traceback (most recent call last):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/srv/http/assignment_1/app/routes.py", line 56, in database
+    table_ = getattr(import_module("cloud.tables"), table.capitalize())(
+AttributeError: module 'cloud.tables' has no attribute 'Register'
+2023-04-03 19:57:17 \u2014 ERROR app \u2014 log_exception:1744 \u2014 Exception on /debug/register [GET]
+Traceback (most recent call last):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/srv/http/assignment_1/app/routes.py", line 56, in database
+    table_ = getattr(import_module("cloud.tables"), table.capitalize())(
+AttributeError: module 'cloud.tables' has no attribute 'Register'
+2023-04-03 19:57:40 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-03 19:57:40 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 19:57:40 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-03 19:57:40 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-03 19:57:40 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 1109
+2023-04-03 19:57:44 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 19:57:44 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 569
+2023-04-03 19:57:44 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='music')
+2023-04-03 19:57:44 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 None
+2023-04-03 20:16:41 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-03 20:16:41 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 20:16:41 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-03 20:16:41 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-03 20:16:41 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 1109
+2023-04-03 20:16:52 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 20:16:52 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-03 20:16:52 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-03 20:16:52 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 400 165
+2023-04-03 20:16:52 \u2014 ERROR app \u2014 log_exception:1744 \u2014 Exception on /login_ [POST]
+Traceback (most recent call last):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/srv/http/assignment_1/app/routes.py", line 26, in login
+    res = login_table.query_key("email", email)
+  File "/srv/http/assignment_1/app/cloud/tables.py", line 56, in query_key
+    return self._table.query(KeyConditionExpression=Key(key_name).eq(query_value))
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/boto3/resources/factory.py", line 580, in do_action
+    response = action(self, *args, **kwargs)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/boto3/resources/action.py", line 88, in __call__
+    response = getattr(parent.meta.client, operation_name)(*args, **params)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/client.py", line 530, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/client.py", line 960, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ValidationException) when calling the Query operation: One or more parameter values were invalid: Condition parameter type does not match schema type
+2023-04-03 20:18:13 \u2014 DEBUG routes \u2014 login:25 \u2014 ImmutableMultiDict([('Email', 's37851110@student.rmit.edu.au'), ('password', '12345')])
+2023-04-03 20:18:13 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-03 20:18:13 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 20:18:13 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-03 20:18:13 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-03 20:18:13 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 400 165
+2023-04-03 20:18:13 \u2014 ERROR app \u2014 log_exception:1744 \u2014 Exception on /login_ [POST]
+Traceback (most recent call last):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/srv/http/assignment_1/app/routes.py", line 28, in login
+    res = login_table.query_key("email", email)
+  File "/srv/http/assignment_1/app/cloud/tables.py", line 56, in query_key
+    return self._table.query(KeyConditionExpression=Key(key_name).eq(query_value))
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/boto3/resources/factory.py", line 580, in do_action
+    response = action(self, *args, **kwargs)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/boto3/resources/action.py", line 88, in __call__
+    response = getattr(parent.meta.client, operation_name)(*args, **params)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/client.py", line 530, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/client.py", line 960, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ValidationException) when calling the Query operation: One or more parameter values were invalid: Condition parameter type does not match schema type
+2023-04-03 20:18:45 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-03 20:18:45 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 20:18:45 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-03 20:18:45 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-03 20:18:45 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 400 165
+2023-04-03 20:18:45 \u2014 ERROR app \u2014 log_exception:1744 \u2014 Exception on /login_ [POST]
+Traceback (most recent call last):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/srv/http/assignment_1/app/routes.py", line 26, in login
+    res = login_table.query_key("email", email)
+  File "/srv/http/assignment_1/app/cloud/tables.py", line 56, in query_key
+    return self._table.query(KeyConditionExpression=Key(key_name).eq(query_value))
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/boto3/resources/factory.py", line 580, in do_action
+    response = action(self, *args, **kwargs)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/boto3/resources/action.py", line 88, in __call__
+    response = getattr(parent.meta.client, operation_name)(*args, **params)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/client.py", line 530, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/client.py", line 960, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ValidationException) when calling the Query operation: One or more parameter values were invalid: Condition parameter type does not match schema type
+2023-04-03 20:19:07 \u2014 DEBUG routes \u2014 login:25 \u2014 ImmutableMultiDict([('Email', 's37851110@student.rmit.edu.au'), ('password', '12345')])
+2023-04-03 20:19:07 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-03 20:19:07 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 20:19:07 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-03 20:19:07 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-03 20:19:07 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 400 165
+2023-04-03 20:19:07 \u2014 ERROR app \u2014 log_exception:1744 \u2014 Exception on /login_ [POST]
+Traceback (most recent call last):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/srv/http/assignment_1/app/routes.py", line 28, in login
+    res = login_table.query_key("email", email)
+  File "/srv/http/assignment_1/app/cloud/tables.py", line 56, in query_key
+    return self._table.query(KeyConditionExpression=Key(key_name).eq(query_value))
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/boto3/resources/factory.py", line 580, in do_action
+    response = action(self, *args, **kwargs)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/boto3/resources/action.py", line 88, in __call__
+    response = getattr(parent.meta.client, operation_name)(*args, **params)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/client.py", line 530, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/client.py", line 960, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ValidationException) when calling the Query operation: One or more parameter values were invalid: Condition parameter type does not match schema type
+2023-04-03 20:20:34 \u2014 DEBUG routes \u2014 login:25 \u2014 ImmutableMultiDict([('email', 's37851110@student.rmit.edu.au'), ('password', '12345')])
+2023-04-03 20:20:34 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-03 20:20:34 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 20:20:34 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-03 20:20:34 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-03 20:20:34 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-03 20:20:34 \u2014 ERROR app \u2014 log_exception:1744 \u2014 Exception on /login_ [POST]
+Traceback (most recent call last):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/srv/http/assignment_1/app/routes.py", line 37, in login
+    return redirect(url_for("/"))
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/helpers.py", line 256, in url_for
+    return current_app.url_for(
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint '/'. Did you mean 'static' instead?
+2023-04-03 20:21:10 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-03 20:21:10 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 20:21:10 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-03 20:21:10 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-03 20:21:10 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-03 20:21:29 \u2014 DEBUG routes \u2014 login:25 \u2014 ImmutableMultiDict([('email', 's37851110@student.rmit.edu.au'), ('password', '12345')])
+2023-04-03 20:21:29 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 20:21:29 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-03 20:21:29 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-03 20:21:29 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-03 20:21:29 \u2014 ERROR app \u2014 log_exception:1744 \u2014 Exception on /login_ [POST]
+Traceback (most recent call last):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/srv/http/assignment_1/app/routes.py", line 37, in login
+    return redirect(url_for("index"))
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/helpers.py", line 256, in url_for
+    return current_app.url_for(
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'index'. Did you mean 'login' instead?
+2023-04-03 20:22:36 \u2014 DEBUG routes \u2014 login:25 \u2014 ImmutableMultiDict([('email', 's37851110@student.rmit.edu.au'), ('password', '12345')])
+2023-04-03 20:22:36 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-03 20:22:36 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 20:22:36 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-03 20:22:36 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-03 20:22:36 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-03 20:22:56 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 20:22:56 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-03 20:22:56 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-03 20:22:56 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-03 20:23:25 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-03 20:23:25 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 20:23:25 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-03 20:23:25 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-03 20:23:25 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-03 20:29:11 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-03 20:29:11 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 20:29:11 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-03 20:29:11 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-03 20:29:11 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-03 20:58:16 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-03 20:58:16 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (2): localhost:8000
+2023-04-03 20:58:16 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (3): localhost:8000
+2023-04-03 20:58:16 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (4): localhost:8000
+2023-04-03 20:58:16 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (5): localhost:8000
+2023-04-03 20:58:17 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (6): localhost:8000
+2023-04-03 20:58:19 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (7): localhost:8000
+2023-04-03 20:58:22 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (8): localhost:8000
+2023-04-03 20:58:28 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (9): localhost:8000
+2023-04-03 20:58:37 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (10): localhost:8000
+2023-04-03 20:58:37 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (11): localhost:8000
+2023-04-03 20:58:37 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (12): localhost:8000
+2023-04-03 20:58:37 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (13): localhost:8000
+2023-04-03 20:58:38 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (14): localhost:8000
+2023-04-03 20:58:38 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (15): localhost:8000
+2023-04-03 20:58:40 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (16): localhost:8000
+2023-04-03 20:58:41 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (17): localhost:8000
+2023-04-03 20:58:41 \u2014 ERROR app \u2014 log_exception:1744 \u2014 Exception on /debug/music [GET]
+Traceback (most recent call last):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/httpsession.py", line 455, in send
+    urllib_response = conn.urlopen(
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/urllib3/util/retry.py", line 525, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/urllib3/packages/six.py", line 770, in reraise
+    raise value
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/urllib3/connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/lib/python3.10/http/client.py", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/awsrequest.py", line 94, in _send_request
+    rval = super()._send_request(
+  File "/usr/lib/python3.10/http/client.py", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/awsrequest.py", line 123, in _send_output
+    self.send(msg)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/awsrequest.py", line 218, in send
+    return super().send(str)
+  File "/usr/lib/python3.10/http/client.py", line 975, in send
+    self.connect()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <botocore.awsrequest.AWSHTTPConnection object at 0x7f49765a5360>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/srv/http/assignment_1/app/routes.py", line 61, in database
+    table_ = getattr(import_module("cloud.tables"), table.capitalize())(
+  File "/srv/http/assignment_1/app/cloud/tables.py", line 77, in __init__
+    super().__init__(
+  File "/srv/http/assignment_1/app/cloud/tables.py", line 17, in __init__
+    self._table = self.__get_table() if self.__exists() else self.__create_table()
+  File "/srv/http/assignment_1/app/cloud/tables.py", line 22, in __exists
+    for table in list(self.db.tables.all())
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/boto3/resources/collection.py", line 81, in __iter__
+    for page in self.pages():
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/boto3/resources/collection.py", line 171, in pages
+    for page in pages:
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/paginate.py", line 269, in __iter__
+    response = self._make_request(current_kwargs)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/paginate.py", line 357, in _make_request
+    return self._method(**current_kwargs)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/client.py", line 530, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/client.py", line 943, in _make_api_call
+    http, parsed_response = self._make_request(
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/client.py", line 966, in _make_request
+    return self._endpoint.make_request(operation_model, request_dict)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/endpoint.py", line 119, in make_request
+    return self._send_request(request_dict, operation_model)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/endpoint.py", line 202, in _send_request
+    while self._needs_retry(
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/endpoint.py", line 354, in _needs_retry
+    responses = self._event_emitter.emit(
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/hooks.py", line 412, in emit
+    return self._emitter.emit(aliased_event_name, **kwargs)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/hooks.py", line 256, in emit
+    return self._emit(event_name, kwargs)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/hooks.py", line 239, in _emit
+    response = handler(**kwargs)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/retryhandler.py", line 207, in __call__
+    if self._checker(**checker_kwargs):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/retryhandler.py", line 284, in __call__
+    should_retry = self._should_retry(
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/retryhandler.py", line 320, in _should_retry
+    return self._checker(attempt_number, response, caught_exception)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/retryhandler.py", line 363, in __call__
+    checker_response = checker(
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/retryhandler.py", line 247, in __call__
+    return self._check_caught_exception(
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/retryhandler.py", line 416, in _check_caught_exception
+    raise caught_exception
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/endpoint.py", line 281, in _do_get_response
+    http_response = self._send(request)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/endpoint.py", line 377, in _send
+    return self.http_session.send(request)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/httpsession.py", line 484, in send
+    raise EndpointConnectionError(endpoint_url=request.url, error=e)
+botocore.exceptions.EndpointConnectionError: Could not connect to the endpoint URL: "http://localhost:8000/"
+2023-04-03 20:58:43 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (18): localhost:8000
+2023-04-03 20:58:50 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (19): localhost:8000
+2023-04-03 20:58:56 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (20): localhost:8000
+2023-04-03 20:58:56 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (21): localhost:8000
+2023-04-03 20:58:56 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (22): localhost:8000
+2023-04-03 20:58:57 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (23): localhost:8000
+2023-04-03 20:58:57 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (24): localhost:8000
+2023-04-03 20:58:58 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (25): localhost:8000
+2023-04-03 20:59:00 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (26): localhost:8000
+2023-04-03 20:59:02 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (27): localhost:8000
+2023-04-03 20:59:02 \u2014 ERROR app \u2014 log_exception:1744 \u2014 Exception on /debug/login [GET]
+Traceback (most recent call last):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/httpsession.py", line 455, in send
+    urllib_response = conn.urlopen(
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/urllib3/util/retry.py", line 525, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/urllib3/packages/six.py", line 770, in reraise
+    raise value
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/urllib3/connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/lib/python3.10/http/client.py", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/awsrequest.py", line 94, in _send_request
+    rval = super()._send_request(
+  File "/usr/lib/python3.10/http/client.py", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/awsrequest.py", line 123, in _send_output
+    self.send(msg)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/awsrequest.py", line 218, in send
+    return super().send(str)
+  File "/usr/lib/python3.10/http/client.py", line 975, in send
+    self.connect()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <botocore.awsrequest.AWSHTTPConnection object at 0x7f497649c4f0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/srv/http/assignment_1/app/routes.py", line 61, in database
+    table_ = getattr(import_module("cloud.tables"), table.capitalize())(
+  File "/srv/http/assignment_1/app/cloud/tables.py", line 98, in __init__
+    super().__init__(
+  File "/srv/http/assignment_1/app/cloud/tables.py", line 17, in __init__
+    self._table = self.__get_table() if self.__exists() else self.__create_table()
+  File "/srv/http/assignment_1/app/cloud/tables.py", line 22, in __exists
+    for table in list(self.db.tables.all())
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/boto3/resources/collection.py", line 81, in __iter__
+    for page in self.pages():
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/boto3/resources/collection.py", line 171, in pages
+    for page in pages:
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/paginate.py", line 269, in __iter__
+    response = self._make_request(current_kwargs)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/paginate.py", line 357, in _make_request
+    return self._method(**current_kwargs)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/client.py", line 530, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/client.py", line 943, in _make_api_call
+    http, parsed_response = self._make_request(
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/client.py", line 966, in _make_request
+    return self._endpoint.make_request(operation_model, request_dict)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/endpoint.py", line 119, in make_request
+    return self._send_request(request_dict, operation_model)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/endpoint.py", line 202, in _send_request
+    while self._needs_retry(
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/endpoint.py", line 354, in _needs_retry
+    responses = self._event_emitter.emit(
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/hooks.py", line 412, in emit
+    return self._emitter.emit(aliased_event_name, **kwargs)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/hooks.py", line 256, in emit
+    return self._emit(event_name, kwargs)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/hooks.py", line 239, in _emit
+    response = handler(**kwargs)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/retryhandler.py", line 207, in __call__
+    if self._checker(**checker_kwargs):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/retryhandler.py", line 284, in __call__
+    should_retry = self._should_retry(
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/retryhandler.py", line 320, in _should_retry
+    return self._checker(attempt_number, response, caught_exception)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/retryhandler.py", line 363, in __call__
+    checker_response = checker(
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/retryhandler.py", line 247, in __call__
+    return self._check_caught_exception(
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/retryhandler.py", line 416, in _check_caught_exception
+    raise caught_exception
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/endpoint.py", line 281, in _do_get_response
+    http_response = self._send(request)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/endpoint.py", line 377, in _send
+    return self.http_session.send(request)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/httpsession.py", line 484, in send
+    raise EndpointConnectionError(endpoint_url=request.url, error=e)
+botocore.exceptions.EndpointConnectionError: Could not connect to the endpoint URL: "http://localhost:8000/"
+2023-04-03 20:59:03 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (28): localhost:8000
+2023-04-03 20:59:09 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (29): localhost:8000
+2023-04-03 20:59:16 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (30): localhost:8000
+2023-04-03 20:59:16 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (31): localhost:8000
+2023-04-03 20:59:16 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (32): localhost:8000
+2023-04-03 20:59:16 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (33): localhost:8000
+2023-04-03 20:59:16 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (34): localhost:8000
+2023-04-03 20:59:17 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (35): localhost:8000
+2023-04-03 20:59:19 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (36): localhost:8000
+2023-04-03 20:59:22 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (37): localhost:8000
+2023-04-03 20:59:22 \u2014 ERROR app \u2014 log_exception:1744 \u2014 Exception on /debug/login [GET]
+Traceback (most recent call last):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/httpsession.py", line 455, in send
+    urllib_response = conn.urlopen(
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/urllib3/util/retry.py", line 525, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/urllib3/packages/six.py", line 770, in reraise
+    raise value
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/urllib3/connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/lib/python3.10/http/client.py", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/awsrequest.py", line 94, in _send_request
+    rval = super()._send_request(
+  File "/usr/lib/python3.10/http/client.py", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/awsrequest.py", line 123, in _send_output
+    self.send(msg)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/awsrequest.py", line 218, in send
+    return super().send(str)
+  File "/usr/lib/python3.10/http/client.py", line 975, in send
+    self.connect()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <botocore.awsrequest.AWSHTTPConnection object at 0x7f497646ca90>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/srv/http/assignment_1/app/routes.py", line 61, in database
+    table_ = getattr(import_module("cloud.tables"), table.capitalize())(
+  File "/srv/http/assignment_1/app/cloud/tables.py", line 98, in __init__
+    super().__init__(
+  File "/srv/http/assignment_1/app/cloud/tables.py", line 17, in __init__
+    self._table = self.__get_table() if self.__exists() else self.__create_table()
+  File "/srv/http/assignment_1/app/cloud/tables.py", line 22, in __exists
+    for table in list(self.db.tables.all())
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/boto3/resources/collection.py", line 81, in __iter__
+    for page in self.pages():
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/boto3/resources/collection.py", line 171, in pages
+    for page in pages:
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/paginate.py", line 269, in __iter__
+    response = self._make_request(current_kwargs)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/paginate.py", line 357, in _make_request
+    return self._method(**current_kwargs)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/client.py", line 530, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/client.py", line 943, in _make_api_call
+    http, parsed_response = self._make_request(
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/client.py", line 966, in _make_request
+    return self._endpoint.make_request(operation_model, request_dict)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/endpoint.py", line 119, in make_request
+    return self._send_request(request_dict, operation_model)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/endpoint.py", line 202, in _send_request
+    while self._needs_retry(
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/endpoint.py", line 354, in _needs_retry
+    responses = self._event_emitter.emit(
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/hooks.py", line 412, in emit
+    return self._emitter.emit(aliased_event_name, **kwargs)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/hooks.py", line 256, in emit
+    return self._emit(event_name, kwargs)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/hooks.py", line 239, in _emit
+    response = handler(**kwargs)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/retryhandler.py", line 207, in __call__
+    if self._checker(**checker_kwargs):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/retryhandler.py", line 284, in __call__
+    should_retry = self._should_retry(
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/retryhandler.py", line 320, in _should_retry
+    return self._checker(attempt_number, response, caught_exception)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/retryhandler.py", line 363, in __call__
+    checker_response = checker(
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/retryhandler.py", line 247, in __call__
+    return self._check_caught_exception(
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/retryhandler.py", line 416, in _check_caught_exception
+    raise caught_exception
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/endpoint.py", line 281, in _do_get_response
+    http_response = self._send(request)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/endpoint.py", line 377, in _send
+    return self.http_session.send(request)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/httpsession.py", line 484, in send
+    raise EndpointConnectionError(endpoint_url=request.url, error=e)
+botocore.exceptions.EndpointConnectionError: Could not connect to the endpoint URL: "http://localhost:8000/"
+2023-04-03 20:59:22 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (38): localhost:8000
+2023-04-03 20:59:28 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (39): localhost:8000
+2023-04-03 20:59:41 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (40): localhost:8000
+2023-04-03 20:59:41 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 20:59:41 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 569
+2023-04-03 20:59:41 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='music')
+2023-04-03 20:59:42 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 None
+2023-04-03 20:59:42 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 20:59:42 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-03 20:59:42 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-03 20:59:42 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-03 20:59:45 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 20:59:45 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 569
+2023-04-03 20:59:45 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='music')
+2023-04-03 20:59:45 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 None
+2023-04-03 20:59:45 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 20:59:45 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-03 20:59:45 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-03 20:59:45 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-03 23:48:48 \u2014 DEBUG urllib3.connectionpool \u2014 _get_conn:273 \u2014 Resetting dropped connection: localhost
+2023-04-03 23:48:48 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 23:48:48 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-03 23:48:48 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-03 23:48:48 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-03 23:54:21 \u2014 DEBUG urllib3.connectionpool \u2014 _get_conn:273 \u2014 Resetting dropped connection: localhost
+2023-04-03 23:54:21 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 23:54:21 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-03 23:54:21 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-03 23:54:21 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-03 23:55:12 \u2014 DEBUG urllib3.connectionpool \u2014 _get_conn:273 \u2014 Resetting dropped connection: localhost
+2023-04-03 23:55:12 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 23:55:12 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-03 23:55:12 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-03 23:55:12 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-03 23:55:43 \u2014 DEBUG urllib3.connectionpool \u2014 _get_conn:273 \u2014 Resetting dropped connection: localhost
+2023-04-03 23:55:43 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-03 23:55:43 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-03 23:55:43 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-03 23:55:43 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 00:01:33 \u2014 DEBUG urllib3.connectionpool \u2014 _get_conn:273 \u2014 Resetting dropped connection: localhost
+2023-04-04 00:01:33 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 00:01:33 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 00:01:33 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 00:01:33 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 00:01:38 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 00:01:38 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 00:01:38 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 00:01:38 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 00:01:43 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 00:01:43 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 00:01:43 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 00:01:43 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 00:01:49 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 00:01:49 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 00:01:49 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 00:01:49 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 00:02:02 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 00:02:02 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 00:02:02 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 00:02:02 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 00:02:11 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 00:02:11 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 00:02:11 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 00:02:11 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 00:02:17 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 00:02:17 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 00:02:17 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 00:02:17 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 00:02:20 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 00:02:20 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 00:02:20 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 00:02:20 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 400 202
+2023-04-04 00:02:20 \u2014 ERROR app \u2014 log_exception:1744 \u2014 Exception on /login [POST]
+Traceback (most recent call last):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/srv/http/assignment_1/app/routes.py", line 26, in login
+    res = login_table.query_key("email", email)
+  File "/srv/http/assignment_1/app/cloud/tables.py", line 56, in query_key
+    return self._table.query(KeyConditionExpression=Key(key_name).eq(query_value))
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/boto3/resources/factory.py", line 580, in do_action
+    response = action(self, *args, **kwargs)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/boto3/resources/action.py", line 88, in __call__
+    response = getattr(parent.meta.client, operation_name)(*args, **params)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/client.py", line 530, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/botocore/client.py", line 960, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ValidationException) when calling the Query operation: One or more parameter values are not valid. The AttributeValue for a key attribute cannot contain an empty string value. Key: email
+2023-04-04 00:02:22 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 00:02:22 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 00:02:22 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 00:02:22 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 00:02:24 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 00:02:24 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 00:02:24 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 00:02:24 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 00:02:50 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 00:02:50 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 00:02:50 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 00:02:50 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 00:02:51 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 00:02:51 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 00:02:51 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 00:02:51 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 00:03:01 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 00:03:01 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 00:03:01 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 00:03:01 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 00:03:03 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 00:03:03 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 00:03:03 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 00:03:03 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 00:03:32 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 00:03:32 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 00:03:32 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 00:03:32 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 00:03:33 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 00:03:33 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 00:03:33 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 00:03:33 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 00:04:38 \u2014 DEBUG urllib3.connectionpool \u2014 _get_conn:273 \u2014 Resetting dropped connection: localhost
+2023-04-04 00:04:38 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 00:04:38 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 00:04:38 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 00:04:38 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 00:04:40 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 00:04:40 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 00:04:40 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 00:04:40 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 00:05:29 \u2014 DEBUG urllib3.connectionpool \u2014 _get_conn:273 \u2014 Resetting dropped connection: localhost
+2023-04-04 00:05:29 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 00:05:29 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 00:05:29 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 00:05:29 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 00:05:31 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 00:05:31 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 00:05:31 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 00:05:31 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 00:06:03 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-04 00:06:03 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 00:06:03 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 00:06:03 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 00:06:03 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 00:06:05 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 00:06:05 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 00:06:05 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 00:06:05 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 00:07:46 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-04 00:07:46 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 00:07:46 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 00:07:46 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 00:07:46 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 1109
+2023-04-04 00:07:55 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 00:07:55 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 00:07:55 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 00:07:55 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 00:08:03 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 00:08:03 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 00:08:03 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 00:08:03 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 00:08:06 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 00:08:06 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 00:08:06 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 00:08:06 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 00:18:54 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-04 00:18:54 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 00:18:54 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 00:18:54 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 00:18:54 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 00:22:59 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-04 00:22:59 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 00:22:59 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 00:22:59 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 00:22:59 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 00:22:59 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 00:22:59 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 00:22:59 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 00:22:59 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 00:23:03 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 00:23:03 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 00:23:03 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 00:23:03 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 00:23:03 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 00:23:03 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 00:23:03 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 00:23:03 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 00:23:07 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 00:23:07 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 00:23:07 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 00:23:07 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 00:23:23 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 00:23:23 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 00:23:23 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 00:23:23 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 00:23:23 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 00:23:23 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 00:23:23 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 00:23:23 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 00:23:29 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 00:23:29 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 00:23:29 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 00:23:29 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 09:57:37 \u2014 DEBUG urllib3.connectionpool \u2014 _get_conn:273 \u2014 Resetting dropped connection: localhost
+2023-04-04 09:57:37 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 09:57:37 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 09:57:37 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 09:57:37 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 09:57:37 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 09:57:37 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 09:57:37 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 09:57:37 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 09:59:52 \u2014 DEBUG urllib3.connectionpool \u2014 _get_conn:273 \u2014 Resetting dropped connection: localhost
+2023-04-04 09:59:52 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 09:59:52 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 09:59:52 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 09:59:52 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 09:59:56 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 09:59:56 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 09:59:56 \u2014 DEBUG cloud.tables \u2014 __get_table:29 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 09:59:56 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 10:44:18 \u2014 ERROR app \u2014 log_exception:1744 \u2014 Exception on /login [GET]
+Traceback (most recent call last):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/srv/http/assignment_1/app/routes.py", line 23, in login
+    return render_template("login.html")
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/srv/http/assignment_1/app/templates/login.html", line 10, in top-level template code
+    <script src="{{ url_for('templates', filename='js/fullheight.js') }}" type="text/javascript"></script>
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'templates' with values ['filename']. Did you mean 'static' instead?
+2023-04-04 11:17:11 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-04 11:17:11 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 11:17:11 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 11:17:11 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 11:17:11 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 11:22:33 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-04 11:22:33 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 11:22:33 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 11:22:33 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 11:22:33 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 1109
+2023-04-04 11:22:42 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 11:22:42 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 11:22:42 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 11:22:42 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 11:22:42 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 11:22:42 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 11:22:42 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 11:22:42 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 12:05:09 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-04 12:05:09 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:05:09 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:05:09 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:05:09 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 12:05:12 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:05:12 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:05:12 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:05:12 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 12:05:12 \u2014 ERROR app \u2014 log_exception:1744 \u2014 Exception on /login [GET]
+Traceback (most recent call last):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/srv/http/assignment_1/app/routes.py", line 24, in login
+    return render_template("login.html")
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/srv/http/assignment_1/app/templates/login.html", line 27, in top-level template code
+    {{ form.email(class_="form-control",placeholder="Email")}}
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/jinja2/environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form' is undefined
+2023-04-04 12:05:20 \u2014 ERROR app \u2014 log_exception:1744 \u2014 Exception on /login [GET]
+Traceback (most recent call last):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/srv/http/assignment_1/app/routes.py", line 24, in login
+    return render_template("login.html")
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/srv/http/assignment_1/app/templates/login.html", line 27, in top-level template code
+    {{ form.email(class_="form-control",placeholder="Email")}}
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/jinja2/environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form' is undefined
+2023-04-04 12:07:06 \u2014 ERROR app \u2014 log_exception:1744 \u2014 Exception on /login [GET]
+Traceback (most recent call last):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/srv/http/assignment_1/app/routes.py", line 26, in login
+    return render_template("login.html", form=form)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/srv/http/assignment_1/app/templates/login.html", line 32, in top-level template code
+    {{ form.pwd(class_="form-control",placeholder="Password")}}
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/jinja2/utils.py", line 83, in from_obj
+    if hasattr(obj, "jinja_pass_arg"):
+jinja2.exceptions.UndefinedError: 'forms.LoginForm object' has no attribute 'pwd'
+2023-04-04 12:12:47 \u2014 ERROR app \u2014 log_exception:1744 \u2014 Exception on /login [POST]
+Traceback (most recent call last):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1845, in finalize_request
+    response = self.make_response(rv)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2137, in make_response
+    raise TypeError(
+TypeError: The view function for 'login' did not return a valid response. The function either returned None or ended without a return statement.
+2023-04-04 12:25:42 \u2014 ERROR app \u2014 log_exception:1744 \u2014 Exception on /login [POST]
+Traceback (most recent call last):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/srv/http/assignment_1/app/routes.py", line 39, in login
+    return render_template(url_for("login", form=form))
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/templating.py", line 146, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/templating.py", line 62, in get_source
+    return self._get_source_fast(environment, template)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: /assignment_1/login?form=%3Cforms.LoginForm+object+at+0x7ff477473880%3E
+2023-04-04 12:34:51 \u2014 ERROR app \u2014 log_exception:1744 \u2014 Exception on /login [POST]
+Traceback (most recent call last):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/srv/http/assignment_1/app/routes.py", line 25, in login
+    elif form.validate_on_submit():
+AttributeError: 'LoginForm' object has no attribute 'validate_on_submit'
+2023-04-04 12:35:44 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-04 12:35:44 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:35:44 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:35:44 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:35:44 \u2014 ERROR app \u2014 log_exception:1744 \u2014 Exception on /login [POST]
+Traceback (most recent call last):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/srv/http/assignment_1/app/routes.py", line 25, in login
+    elif request.method == "POST" and form.validate():
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/wtforms/form.py", line 329, in validate
+    return super().validate(extra)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/wtforms/form.py", line 146, in validate
+    if not field.validate(self, extra):
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/wtforms/fields/core.py", line 242, in validate
+    stop_validation = self._run_validation_chain(form, chain)
+  File "/srv/http/assignment_1/app/__pypackages__/3.11/lib/wtforms/fields/core.py", line 262, in _run_validation_chain
+    validator(form, self)
+  File "/srv/http/assignment_1/app/forms.py", line 20, in __call__
+    exists = getattr(import_module("cloud.tables"), self.table.capitalize())(
+TypeError: 'Login' object is not subscriptable
+2023-04-04 12:37:46 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-04 12:37:46 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:37:46 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:37:46 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:37:46 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 12:37:46 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:37:46 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:37:46 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:37:46 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 12:37:46 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:37:46 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:37:46 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:37:46 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 12:37:46 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:37:46 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:37:46 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:37:46 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 12:37:46 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:37:46 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:37:46 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:37:46 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 12:37:49 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:37:49 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:37:49 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:37:49 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 12:37:54 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:37:54 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:37:54 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:37:54 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 12:37:54 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:37:54 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:37:54 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:37:54 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 12:37:54 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:37:54 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:37:54 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:37:54 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 12:38:08 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:38:08 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:38:08 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:38:08 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 12:38:08 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:38:08 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:38:08 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:38:08 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 12:38:08 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:38:08 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:38:08 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:38:08 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 12:39:47 \u2014 DEBUG urllib3.connectionpool \u2014 _get_conn:273 \u2014 Resetting dropped connection: localhost
+2023-04-04 12:39:47 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:39:47 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:39:47 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:39:47 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:39:47 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:39:47 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:39:47 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:39:47 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:39:47 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:39:47 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:39:47 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:39:47 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:40:14 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-04 12:40:14 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:40:14 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:40:14 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:40:14 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:40:14 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:40:14 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:40:14 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:40:14 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:40:14 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:40:14 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:40:14 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:40:14 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:40:25 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:40:25 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:40:25 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:40:25 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:40:25 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:40:25 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:40:25 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:40:25 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:40:25 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:40:25 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:40:25 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:40:25 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:40:54 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-04 12:40:54 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:40:54 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:40:54 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:40:54 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:40:54 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:40:54 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:40:54 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:40:54 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:40:54 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:40:54 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:40:54 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:40:54 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:41:13 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:41:13 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:41:13 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:41:13 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:41:13 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:41:13 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:41:13 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:41:13 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:41:13 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:41:13 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:41:13 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:41:13 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:41:36 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-04 12:41:36 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:41:36 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:41:36 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:41:36 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:41:36 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:41:36 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:41:36 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:41:36 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:41:36 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:41:36 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:41:36 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:41:36 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:42:40 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-04 12:42:40 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:42:40 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:42:40 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:42:40 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:42:40 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:42:40 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:42:40 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:42:40 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:42:40 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:42:40 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:42:40 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:42:40 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:43:11 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-04 12:43:11 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:43:11 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:43:11 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:43:11 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:43:11 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:43:11 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:43:11 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:43:11 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:43:11 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:43:11 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:43:11 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:43:11 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:44:30 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-04 12:44:30 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:44:30 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:44:30 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:44:30 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:44:30 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:44:30 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:44:30 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:44:30 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:44:30 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:44:30 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:44:30 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:44:30 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:44:59 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-04 12:44:59 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:44:59 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:44:59 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:44:59 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:44:59 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:44:59 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:44:59 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:44:59 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:44:59 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:44:59 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:44:59 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:44:59 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:45:09 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-04 12:45:09 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:45:09 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:45:09 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:45:09 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:45:09 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:45:09 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:45:09 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:45:09 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:45:09 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:45:09 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:45:09 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:45:09 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:45:26 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-04 12:45:26 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:45:26 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:45:26 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:45:26 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:45:26 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:45:26 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:45:26 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:45:26 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:45:26 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:45:26 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:45:26 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:45:26 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:46:33 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-04 12:46:33 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:46:33 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:46:33 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:46:33 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:46:33 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:46:33 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:46:33 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:46:33 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:46:33 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:46:33 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:46:33 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:46:33 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:47:21 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-04 12:47:21 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:47:21 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:47:21 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:47:21 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:47:21 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:47:21 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:47:21 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:47:21 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:47:21 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:47:21 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:47:21 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:47:21 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:47:31 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-04 12:47:31 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:47:31 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:47:31 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:47:31 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:47:31 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:47:31 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:47:31 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:47:31 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:47:31 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:47:31 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:47:31 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:47:31 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:47:55 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-04 12:47:55 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:47:55 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:47:55 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:47:55 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:47:55 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:47:55 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:47:55 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:47:55 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:47:55 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:47:55 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:47:55 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:47:55 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:48:53 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-04 12:48:53 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:48:53 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:48:53 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:48:53 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:48:53 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:48:53 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:48:53 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:48:53 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:48:53 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:48:53 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:48:53 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:48:53 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:50:08 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-04 12:50:08 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:50:08 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:50:08 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:50:08 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:50:08 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:50:08 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:50:08 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:50:08 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:50:08 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:50:08 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:50:08 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:50:08 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:50:24 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-04 12:50:24 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:50:24 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:50:24 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:50:24 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:50:24 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:50:24 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:50:24 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:50:24 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:50:24 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:50:24 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:50:24 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:50:24 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 39
+2023-04-04 12:50:39 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:50:39 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:50:39 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:50:39 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 12:50:39 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:50:39 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:50:39 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:50:39 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 12:50:39 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:50:39 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:50:39 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:50:39 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 12:50:43 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:50:43 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:50:43 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:50:43 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 12:50:43 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:50:43 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:50:43 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:50:43 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 12:50:43 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:50:43 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:50:43 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:50:43 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 12:50:43 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:50:43 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:50:43 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:50:43 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 12:50:43 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 12:50:43 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 12:50:43 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 12:50:43 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 16:04:37 \u2014 DEBUG app \u2014 init_app:31 \u2014 <Config {'ENV': 'production', 'DEBUG': False, 'TESTING': False, 'PROPAGATE_EXCEPTIONS': None, 'SECRET_KEY': '"secret"', 'PERMANENT_SESSION_LIFETIME': datetime.timedelta(days=31), 'USE_X_SENDFILE': False, 'SERVER_NAME': None, 'APPLICATION_ROOT': '/', 'SESSION_COOKIE_NAME': 'session', 'SESSION_COOKIE_DOMAIN': None, 'SESSION_COOKIE_PATH': None, 'SESSION_COOKIE_HTTPONLY': True, 'SESSION_COOKIE_SECURE': False, 'SESSION_COOKIE_SAMESITE': None, 'SESSION_REFRESH_EACH_REQUEST': True, 'MAX_CONTENT_LENGTH': None, 'SEND_FILE_MAX_AGE_DEFAULT': None, 'TRAP_BAD_REQUEST_ERRORS': None, 'TRAP_HTTP_EXCEPTIONS': False, 'EXPLAIN_TEMPLATE_LOADING': False, 'PREFERRED_URL_SCHEME': 'http', 'JSON_AS_ASCII': None, 'JSON_SORT_KEYS': None, 'JSONIFY_PRETTYPRINT_REGULAR': None, 'JSONIFY_MIMETYPE': None, 'TEMPLATES_AUTO_RELOAD': None, 'MAX_COOKIE_SIZE': 4093, 'DB_ENDPOINT': '"http://localhost:8000"'}>
+2023-04-04 16:05:16 \u2014 DEBUG app \u2014 init_app:31 \u2014 <Config {'ENV': 'production', 'DEBUG': False, 'TESTING': False, 'PROPAGATE_EXCEPTIONS': None, 'SECRET_KEY': 'secret', 'PERMANENT_SESSION_LIFETIME': datetime.timedelta(days=31), 'USE_X_SENDFILE': False, 'SERVER_NAME': None, 'APPLICATION_ROOT': '/', 'SESSION_COOKIE_NAME': 'session', 'SESSION_COOKIE_DOMAIN': None, 'SESSION_COOKIE_PATH': None, 'SESSION_COOKIE_HTTPONLY': True, 'SESSION_COOKIE_SECURE': False, 'SESSION_COOKIE_SAMESITE': None, 'SESSION_REFRESH_EACH_REQUEST': True, 'MAX_CONTENT_LENGTH': None, 'SEND_FILE_MAX_AGE_DEFAULT': None, 'TRAP_BAD_REQUEST_ERRORS': None, 'TRAP_HTTP_EXCEPTIONS': False, 'EXPLAIN_TEMPLATE_LOADING': False, 'PREFERRED_URL_SCHEME': 'http', 'JSON_AS_ASCII': None, 'JSON_SORT_KEYS': None, 'JSONIFY_PRETTYPRINT_REGULAR': None, 'JSONIFY_MIMETYPE': None, 'TEMPLATES_AUTO_RELOAD': None, 'MAX_COOKIE_SIZE': 4093, 'DB_ENDPOINT': 'http://localhost:8000'}>
+2023-04-04 16:05:16 \u2014 DEBUG urllib3.connectionpool \u2014 _new_conn:228 \u2014 Starting new HTTP connection (1): localhost:8000
+2023-04-04 16:05:16 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 16:05:16 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 16:05:16 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 16:05:16 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 16:05:16 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 16:05:16 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 16:05:16 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 16:05:16 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144
+2023-04-04 16:05:20 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 32
+2023-04-04 16:05:20 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 474
+2023-04-04 16:05:20 \u2014 DEBUG cloud.tables \u2014 __get_table:30 \u2014 Loaded table at dynamodb.Table(name='login')
+2023-04-04 16:05:20 \u2014 DEBUG urllib3.connectionpool \u2014 _make_request:456 \u2014 http://localhost:8000 "POST / HTTP/1.1" 200 144

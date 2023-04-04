@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{ table_name }} Debug</title>
+</head>
+<body>
+    <ul id="navigation">
+    {% for item in database_items %}
+        <pre>{{ item }}</pre>
+    {% endfor %}
+    </ul>
+</body>
+</html>
