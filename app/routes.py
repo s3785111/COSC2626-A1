@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 @current_app.route("/")
 @login_required
 def root():
-    return f"Landing"
+    return render_template("home.html")
 
 
 @current_app.route("/login", methods=["GET", "POST"])

@@ -28,8 +28,6 @@ def init_app():
     except FileNotFoundError:
         logger.warning("Config no found, defaults will be loaded")
 
-    logger.debug(app.config)
-
     app.extensions["db"] = boto3.resource(
         "dynamodb", endpoint_url=app.config.get("DB_ENDPOINT", "http://localhost:8000")
     )
