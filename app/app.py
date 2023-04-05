@@ -23,6 +23,7 @@ def init_app():
     try:
         config = configparser.ConfigParser()
         config.read("config.ini")
+        app.config["BUCKET_NAME"] = config["s3"]["BUCKET_NAME"]
         app.config["SECRET_KEY"] = config["flask"]["SECRET_KEY"]
         app.config["DB_ENDPOINT"] = config["dynamodb"]["DB_ENDPOINT"]
     except FileNotFoundError:
