@@ -105,5 +105,5 @@ class Login(BaseTable):
         )
 
     def load_batch(self, batch_json):
-        batch = json.loads(batch_json)["songs"]
+        batch = json.loads(batch_json)
         super().load_batch(batch)
