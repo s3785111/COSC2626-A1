@@ -1,7 +1,7 @@
 import json
 import logging
 from auth import User
-from forms import LoginForm, RegisterForm
+from forms import LoginForm, RegisterForm, QueryForm
 from cloud import tables
 from importlib import import_module
 from flask import current_app, render_template, request, redirect, url_for, flash
@@ -10,10 +10,41 @@ from flask_login import login_user, logout_user, login_required, current_user
 logger = logging.getLogger(__name__)
 
 
-@current_app.route("/")
+@current_app.route("/", methods=["GET", "POST"])
 @login_required
 def root():
-    return render_template("home.html")
+    form = QueryForm(request.form)
+
+    if request.method == "GET":
+        return render_template("home.html", form=form)
+    else:
+        music_table = tables.Music(current_app.extensions["db"])
+
+        # Filter by attributes and both hash and range keys if available
+        if form.data["artist"] and form.data["title"]:
+            keys = {
+                "artist": form.data["artist"],
+                "title": form.data["title"]
+            }
+            attributes = {"year": form.data["year"]}
+        # Filter atttributes and only hash key
+        elif form.data["artist"]:
+            keys = {
+                "artist": form.data["artist"]
+            }
+            attributes = {
+                "year": form.data["year"],
+                "title": form.data["title"]
+            }
+        # Filter by attributes only
+        else:
+            keys = None
+            attributes = {
+                "year": form.data["year"],
+                "title": form.data["title"]
+            }
+        results = music_table.query(keys, attributes)["Items"]
+        return render_template("home.html", form=form, results=results)
 
 
 @current_app.route("/login", methods=["GET", "POST"])
@@ -24,7 +55,7 @@ def login():
         return redirect(url_for("root"))
     elif request.method == "POST" and form.validate():
         login_table = tables.Login(current_app.extensions["db"])
-        res = login_table.query_key("email", form.data["email"])
+        res = login_table.query(keys={"email": form.data["email"]})
         user = User(
             res["Items"][0].get("email"),
             res["Items"][0].get("username"),
@@ -66,7 +97,7 @@ def database(table):
         current_app.extensions["db"]
     )
     items_formatted = [
-        json.dumps(item, indent=2) for item in table_.query_all()["Items"]
+        json.dumps(item, indent=2) for item in table_.query()["Items"]
     ]
     return render_template(
         "database.html", table_name=table, database_items=items_formatted

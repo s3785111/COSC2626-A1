@@ -1,6 +1,7 @@
 import logging
 import json
-from boto3.dynamodb.conditions import Attr, Key
+from functools import reduce
+from boto3.dynamodb.conditions import Attr, Key, And, Or
 from botocore.exceptions import ClientError
 
 
@@ -50,11 +51,34 @@ class BaseTable:
 
         return table
 
-    def query_all(self):
-        return self._table.scan()
+    def query(self, keys=None, attributes=None, condition=And):
+        """ 
+        General query method. Can query by keys, keys and attributes, or attributes.
+        If no keys or attributes are provided, table scan is performed.
+        """
+        key_reducable = (
+            [Key(k).eq(v) for k, v in keys.items() if v] if keys else None
+        )  # Filter expression for keys only on non-empty keys
+        filter_reducable = (
+            [Attr(k).eq(v) for k, v in attributes.items() if v] if attributes else None
+        )  # Filter expression for attributes only on non-empty attributes
 
-    def query_key(self, key_name, query_value):
-        return self._table.query(KeyConditionExpression=Key(key_name).eq(query_value))
+        # Query on keys and attributes
+        if key_reducable and filter_reducable:
+            results = self._table.query(
+                KeyConditionExpression=reduce(condition, key_reducable),
+                FilterExpression=reduce(condition, filter_reducable) if filter_reducable else None,
+            )
+        # Query on attributes only
+        elif not key_reducable and filter_reducable:
+            results = self._table.scan(
+                FilterExpression=reduce(condition, filter_reducable)
+            )
+        # Query all
+        else:
+            return self._table.scan()
+
+        return results
 
     def load_obj(self, obj):
         try:
@@ -92,6 +116,23 @@ class Music(BaseTable):
     def load_batch(self, batch_json):
         batch = json.loads(batch_json)["songs"]
         super().load_batch(batch)
+
+
+class Subscriptions(BaseTable):
+    def __init__(self, db):
+        super().__init__(
+            db,
+            TableName="subscriptions",
+            KeySchema=[
+                {"AttributeName": "user", "KeyType": "HASH"},
+                {"AttributeName": "subId", "KeyType": "RANGE"},
+            ],
+            AttributeDefinitions=[
+                {"AttributeName": "user", "AttributeType": "S"},
+                {"AttributeName": "subId", "AttributeType": "S"},
+            ],
+            ProvisionedThroughput={"ReadCapacityUnits": 10, "WriteCapacityUnits": 10},
+        )
 
 
 class Login(BaseTable):

@@ -24,7 +24,7 @@ class User(UserMixin):
 @login_manager.user_loader
 def load_user(user_id):
     login_table = tables.Login(current_app.extensions["db"])
-    res = login_table.query_key("email", user_id)
+    res = login_table.query(keys={"email": user_id})
     return (
         User(
             email=res["Items"][0].get("email"),

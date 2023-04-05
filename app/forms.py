@@ -19,7 +19,7 @@ class ExistsInTable(object):
         )
         exists = getattr(import_module("cloud.tables"), self.table.capitalize())(
             current_app.extensions["db"]
-        ).query_key(self.attribute, field.data)["Count"]
+        ).query(keys={f"{self.attribute}": field.data})["Count"]
         if exists and not self.desired or not exists and self.desired:
             raise ValidationError(message)
 
@@ -39,7 +39,7 @@ class RegisterForm(Form):
 class LoginForm(Form):
     def validate_password(self, field):
         login_table = tables.Login(current_app.extensions["db"])
-        res = login_table.query_key("email", self.data["email"])
+        res = login_table.query(keys={"email": self.data["email"]})
 
         if not (res["Count"] and res["Items"][0].get("password") == field.data):
             raise ValidationError("Incorrect email or password")
@@ -48,3 +48,9 @@ class LoginForm(Form):
         validators=[InputRequired(), Email(), ExistsInTable("email", "login")]
     )
     password = StringField(validators=[InputRequired(), validate_password])
+
+
+class QueryForm(Form):
+    title = StringField()
+    artist = StringField()
+    year = StringField()
