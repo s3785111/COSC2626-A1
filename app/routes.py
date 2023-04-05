@@ -1,7 +1,7 @@
 import json
 import logging
 from auth import User
-from forms import LoginForm
+from forms import LoginForm, RegisterForm
 from cloud import tables
 from importlib import import_module
 from flask import current_app, render_template, request, redirect, url_for, flash
@@ -45,10 +45,19 @@ def logout():
 
 @current_app.route("/register", methods=["GET", "POST"])
 def register():
-    if request.method == "GET":
-        return render_template("register.html")
-    elif request.method == "POST":
-        return redirect(url_for("login"))
+    form = RegisterForm(request.form)
+
+    if request.method == "POST" and form.validate():
+        user = User(
+            form.data["email"],
+            form.data["username"],
+            form.data["password"],
+        )
+        login_user(user, remember=True)
+        tables.Login(current_app.extensions["db"]).load_obj(vars(user))
+        return redirect(url_for("root"))
+    else:
+        return render_template("register.html", form=form)
 
 
 @current_app.route("/debug/<table>")

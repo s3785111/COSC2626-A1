@@ -15,13 +15,25 @@ class ExistsInTable(object):
     def __call__(self, form, field):
         message = (
             self.message
-            or f'{self.attribute.capitalize()} {field.data} {"must" if self.desired else "must not"} exist'
+            or f'{self.attribute.capitalize()} {"must" if self.desired else "must not"} already exist'
         )
         exists = getattr(import_module("cloud.tables"), self.table.capitalize())(
             current_app.extensions["db"]
         ).query_key(self.attribute, field.data)["Count"]
         if exists and not self.desired or not exists and self.desired:
             raise ValidationError(message)
+
+
+class RegisterForm(Form):
+    email = StringField(
+        validators=[
+            InputRequired(),
+            Email(),
+            ExistsInTable("email", "login", desired=False),
+        ]
+    )
+    username = StringField(validators=[InputRequired()])
+    password = StringField(validators=[InputRequired()])
 
 
 class LoginForm(Form):
