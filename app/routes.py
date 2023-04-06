@@ -21,30 +21,14 @@ def root():
     music_table = tables.Music(current_app.extensions["db"])
 
     # Query request
-    if request.method == "GET" or request.form["action"] == "query":
-        # Filter by attributes and both hash and range keys if available
-        if query_form.data["artist"] and query_form.data["title"]:
-            keys = {
-                "artist": query_form.data["artist"],
-                "title": query_form.data["title"],
-            }
-            attributes = {"year": query_form.data["year"]}
-        # Filter atttributes and only hash key
-        elif query_form.data["artist"]:
-            keys = {"artist": query_form.data["artist"]}
-            attributes = {
-                "year": query_form.data["year"],
-                "title": query_form.data["title"],
-            }
-        # Filter by attributes only
-        else:
-            keys = None
-            attributes = {
-                "year": query_form.data["year"],
-                "title": query_form.data["title"],
-            }
+    if request.method == "POST" and request.form["action"] == "query":
+        keys = None
+        attributes = {
+            "artist": query_form.data["artist"],
+            "year": query_form.data["year"],
+            "title": query_form.data["title"]
+        }
         results = music_table.query(keys, attributes)["Items"]
-
     # Subscribe request
     elif request.form["action"] == "subscribe":
         subscription = {
@@ -52,7 +36,6 @@ def root():
             "song_id": sub_form.data["song_id"],
         }
         tables.Subscriptions(current_app.extensions["db"]).load_obj(subscription)
-
     # Unubscribe request
     elif request.form["action"] == "unsubscribe":
         subscription = {
@@ -71,7 +54,6 @@ def root():
             attributes={"song_id": [sub["song_id"] for sub in subs]},
             attr_condition="is_in",
         )["Items"]
-
         # From https://stackoverflow.com/questions/5501810/join-two-lists-of-dictionaries-on-a-single-key
         # Get list of dicts combining song and sub info
         subs = [{**u, **v} for u, v in zip_longest(subs, subs_songs, fillvalue={})]
