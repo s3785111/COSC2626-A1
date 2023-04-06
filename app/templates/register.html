@@ -10,6 +10,7 @@
 </head>
 <body>
     
+    {% include 'bar.html' %}
     {{ form.csrf_token }}
 
     {% with messages = get_flashed_messages(with_categories=true) %}
