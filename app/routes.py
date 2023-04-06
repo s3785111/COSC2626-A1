@@ -68,7 +68,7 @@ def root():
     # Get list of songs matching to sub list
     subs_songs = music_table.query(
         attributes={"song_id": [sub["song_id"] for sub in subs]},
-        attribute_condition="is_in",
+        attr_condition="is_in",
     )["Items"]
 
     # From https://stackoverflow.com/questions/5501810/join-two-lists-of-dictionaries-on-a-single-key
