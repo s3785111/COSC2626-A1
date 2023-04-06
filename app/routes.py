@@ -61,26 +61,27 @@ def root():
         }
         tables.Subscriptions(current_app.extensions["db"]).delete_obj(subscription)
 
-    # Get user's sub list
     subs_table = tables.Subscriptions(current_app.extensions["db"])
     subs = subs_table.query(keys={"user": current_user.email})["Items"]
 
-    # Get list of songs matching to sub list
-    subs_songs = music_table.query(
-        attributes={"song_id": [sub["song_id"] for sub in subs]},
-        attr_condition="is_in",
-    )["Items"]
+    # Add song details to subs if necessary
+    if subs:
+        # Get list of songs matching to sub list
+        subs_songs = music_table.query(
+            attributes={"song_id": [sub["song_id"] for sub in subs]},
+            attr_condition="is_in",
+        )["Items"]
 
-    # From https://stackoverflow.com/questions/5501810/join-two-lists-of-dictionaries-on-a-single-key
-    # Get list of dicts combining song and sub info
-    subs_zip = [{**u, **v} for u, v in zip_longest(subs, subs_songs, fillvalue={})]
+        # From https://stackoverflow.com/questions/5501810/join-two-lists-of-dictionaries-on-a-single-key
+        # Get list of dicts combining song and sub info
+        subs = [{**u, **v} for u, v in zip_longest(subs, subs_songs, fillvalue={})]
 
     return render_template(
         "home.html",
         query_form=query_form,
         sub_form=sub_form,
         results=results,
-        subs=subs_zip,
+        subs=subs,
         bucket=current_app.config.get("BUCKET_NAME", ""),
     )
 
