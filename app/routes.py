@@ -21,7 +21,7 @@ def root():
     music_table = tables.Music(current_app.extensions["db"])
 
     # Query request
-    if request.method == "POST" and request.form["action"] == "query":
+    if request.method == "GET" or request.form["action"] == "query":
         keys = None
         attributes = {
             "artist": query_form.data["artist"],
