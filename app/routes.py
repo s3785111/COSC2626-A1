@@ -1,10 +1,11 @@
 import json
 import logging
 from auth import User
-from forms import LoginForm, RegisterForm, QueryForm
 from cloud import tables
+from forms import LoginForm, RegisterForm, QueryForm, SubscriptionForm
 from importlib import import_module
-from flask import current_app, render_template, request, redirect, url_for, flash
+from itertools import zip_longest
+from flask import current_app, render_template, request, redirect, url_for
 from flask_login import login_user, logout_user, login_required, current_user
 
 logger = logging.getLogger(__name__)
@@ -13,38 +14,75 @@ logger = logging.getLogger(__name__)
 @current_app.route("/", methods=["GET", "POST"])
 @login_required
 def root():
-    form = QueryForm(request.form)
+    query_form = QueryForm(request.form)
+    sub_form = SubscriptionForm(request.form)
+    results = None
 
-    if request.method == "GET":
-        return render_template("home.html", form=form)
-    else:
-        music_table = tables.Music(current_app.extensions["db"])
+    music_table = tables.Music(current_app.extensions["db"])
 
+    # Query request
+    if request.method == "GET" or request.form["action"] == "query":
         # Filter by attributes and both hash and range keys if available
-        if form.data["artist"] and form.data["title"]:
+        if query_form.data["artist"] and query_form.data["title"]:
             keys = {
-                "artist": form.data["artist"],
-                "title": form.data["title"]
+                "artist": query_form.data["artist"],
+                "title": query_form.data["title"],
             }
-            attributes = {"year": form.data["year"]}
+            attributes = {"year": query_form.data["year"]}
         # Filter atttributes and only hash key
-        elif form.data["artist"]:
-            keys = {
-                "artist": form.data["artist"]
-            }
+        elif query_form.data["artist"]:
+            keys = {"artist": query_form.data["artist"]}
             attributes = {
-                "year": form.data["year"],
-                "title": form.data["title"]
+                "year": query_form.data["year"],
+                "title": query_form.data["title"],
             }
         # Filter by attributes only
         else:
             keys = None
             attributes = {
-                "year": form.data["year"],
-                "title": form.data["title"]
+                "year": query_form.data["year"],
+                "title": query_form.data["title"],
             }
         results = music_table.query(keys, attributes)["Items"]
-        return render_template("home.html", form=form, results=results)
+
+    # Subscribe request
+    elif request.form["action"] == "subscribe":
+        subscription = {
+            "user": sub_form.data["user"],
+            "song_id": sub_form.data["song_id"],
+        }
+        tables.Subscriptions(current_app.extensions["db"]).load_obj(subscription)
+
+    # Unubscribe request
+    elif request.form["action"] == "unsubscribe":
+        subscription = {
+            "user": sub_form.data["user"],
+            "song_id": sub_form.data["song_id"],
+        }
+        tables.Subscriptions(current_app.extensions["db"]).delete_obj(subscription)
+
+    # Get user's sub list
+    subs_table = tables.Subscriptions(current_app.extensions["db"])
+    subs = subs_table.query(keys={"user": current_user.email})["Items"]
+
+    # Get list of songs matching to sub list
+    subs_songs = music_table.query(
+        attributes={"song_id": [sub["song_id"] for sub in subs]},
+        attribute_condition="is_in",
+    )["Items"]
+
+    # From https://stackoverflow.com/questions/5501810/join-two-lists-of-dictionaries-on-a-single-key
+    # Get list of dicts combining song and sub info
+    subs_zip = [{**u, **v} for u, v in zip_longest(subs, subs_songs, fillvalue={})]
+
+    return render_template(
+        "home.html",
+        query_form=query_form,
+        sub_form=sub_form,
+        results=results,
+        subs=subs_zip,
+        bucket=current_app.config.get("BUCKET_NAME", ""),
+    )
 
 
 @current_app.route("/login", methods=["GET", "POST"])
@@ -92,13 +130,11 @@ def register():
 
 
 @current_app.route("/debug/<table>")
-def database(table):
+def debug(table):
     table_ = getattr(import_module("cloud.tables"), table.capitalize())(
         current_app.extensions["db"]
     )
-    items_formatted = [
-        json.dumps(item, indent=2) for item in table_.query()["Items"]
-    ]
+    items_formatted = [json.dumps(item, indent=2) for item in table_.query()["Items"]]
     return render_template(
         "database.html", table_name=table, database_items=items_formatted
     )

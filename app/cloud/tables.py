@@ -51,23 +51,39 @@ class BaseTable:
 
         return table
 
-    def query(self, keys=None, attributes=None, condition=And):
-        """ 
+    def query(
+        self,
+        keys=None,
+        attributes=None,
+        condition=And,
+        key_condition="eq",
+        attr_condition="eq",
+    ):
+        """
         General query method. Can query by keys, keys and attributes, or attributes.
         If no keys or attributes are provided, table scan is performed.
         """
         key_reducable = (
-            [Key(k).eq(v) for k, v in keys.items() if v] if keys else None
+            [getattr(Key(k), key_condition)(v) for k, v in keys.items() if v]
+            if keys
+            else None
         )  # Filter expression for keys only on non-empty keys
         filter_reducable = (
-            [Attr(k).eq(v) for k, v in attributes.items() if v] if attributes else None
+            [getattr(Attr(k), attr_condition)(v) for k, v in attributes.items() if v]
+            if attributes
+            else None
         )  # Filter expression for attributes only on non-empty attributes
 
         # Query on keys and attributes
         if key_reducable and filter_reducable:
             results = self._table.query(
                 KeyConditionExpression=reduce(condition, key_reducable),
-                FilterExpression=reduce(condition, filter_reducable) if filter_reducable else None,
+                FilterExpression=reduce(condition, filter_reducable),
+            )
+        # Query on keys only
+        if key_reducable and not filter_reducable:
+            results = self._table.query(
+                KeyConditionExpression=reduce(condition, key_reducable)
             )
         # Query on attributes only
         elif not key_reducable and filter_reducable:
@@ -81,8 +97,16 @@ class BaseTable:
         return results
 
     def load_obj(self, obj):
+        log.debug(obj)
         try:
             self._table.put_item(Item=obj)
+        except Exception as err:
+            log.error(err)
+            raise
+
+    def delete_obj(self, obj):
+        try:
+            self._table.delete_item(Key=obj)
         except Exception as err:
             log.error(err)
             raise
@@ -103,12 +127,26 @@ class Music(BaseTable):
             db,
             TableName="music",
             KeySchema=[
-                {"AttributeName": "artist", "KeyType": "HASH"},
-                {"AttributeName": "title", "KeyType": "RANGE"},
+                {"AttributeName": "song_id", "KeyType": "HASH"},
             ],
             AttributeDefinitions=[
+                {"AttributeName": "song_id", "AttributeType": "S"},
                 {"AttributeName": "artist", "AttributeType": "S"},
                 {"AttributeName": "title", "AttributeType": "S"},
+            ],
+            GlobalSecondaryIndexes=[
+                {
+                    "IndexName": "ArtistTitle",
+                    "KeySchema": [
+                        {"AttributeName": "artist", "KeyType": "HASH"},
+                        {"AttributeName": "title", "KeyType": "RANGE"},
+                    ],
+                    "Projection": {"ProjectionType": "ALL"},
+                    "ProvisionedThroughput": {
+                        "ReadCapacityUnits": 10,
+                        "WriteCapacityUnits": 10,
+                    },
+                }
             ],
             ProvisionedThroughput={"ReadCapacityUnits": 10, "WriteCapacityUnits": 10},
         )
@@ -125,11 +163,11 @@ class Subscriptions(BaseTable):
             TableName="subscriptions",
             KeySchema=[
                 {"AttributeName": "user", "KeyType": "HASH"},
-                {"AttributeName": "subId", "KeyType": "RANGE"},
+                {"AttributeName": "song_id", "KeyType": "RANGE"},
             ],
             AttributeDefinitions=[
                 {"AttributeName": "user", "AttributeType": "S"},
-                {"AttributeName": "subId", "AttributeType": "S"},
+                {"AttributeName": "song_id", "AttributeType": "S"},
             ],
             ProvisionedThroughput={"ReadCapacityUnits": 10, "WriteCapacityUnits": 10},
         )

@@ -1,7 +1,7 @@
 from cloud import tables
 from importlib import import_module
 from flask import current_app
-from wtforms import Form, StringField, ValidationError
+from wtforms import Form, StringField, HiddenField, ValidationError
 from wtforms.validators import Email, InputRequired
 
 
@@ -54,3 +54,8 @@ class QueryForm(Form):
     title = StringField()
     artist = StringField()
     year = StringField()
+
+
+class SubscriptionForm(Form):
+    user = HiddenField()
+    song_id = HiddenField()
